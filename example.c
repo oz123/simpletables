@@ -1,16 +1,16 @@
 #include <locale.h>   // for setlocale
 #include <ncurses.h>  // for ncurses
 
-#define ST_STYLE 2         // 0 for custom, 1 for simple, 2 for unicode
+#define ST_STYLE 1         // 0 for custom, 1 for simple, 2 for unicode
 #include "simpletables.h"  // for simpletables
 
 int main(void) {
   // Initialize ncurses
   setlocale(LC_ALL, "");
   initscr();
-  start_color();
-  init_pair(1, COLOR_BLACK, COLOR_CYAN);
-  wbkgd(stdscr, COLOR_PAIR(1));
+  //start_color();
+  //init_pair(1, COLOR_WHITE, COLOR_BLACK);
+  //wbkgd(stdscr, COLOR_PAIR(1));
   refresh();
 
   // Create a table
